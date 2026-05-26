@@ -1,0 +1,149 @@
+/* ============================================
+   PORTFOLIO — ANIMATIONS
+   ============================================ */
+
+/* ==============================
+   REVEAL ANIMATIONS
+   ============================== */
+.reveal-line {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: revealLine 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.reveal-line:nth-child(1) { animation-delay: 0.1s; }
+.reveal-line:nth-child(2) { animation-delay: 0.22s; }
+.reveal-line:nth-child(3) { animation-delay: 0.34s; }
+
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: revealFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero__subtitle.reveal-fade  { animation-delay: 0.55s; }
+.hero__actions.reveal-fade   { animation-delay: 0.7s; }
+
+@keyframes revealLine {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes revealFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   SCROLL-TRIGGERED (JS adds .in-view)
+   ============================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger delays for grid children */
+.stagger-children > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children > *:nth-child(2) { transition-delay: 0.15s; }
+.stagger-children > *:nth-child(3) { transition-delay: 0.25s; }
+.stagger-children > *:nth-child(4) { transition-delay: 0.35s; }
+.stagger-children > *:nth-child(5) { transition-delay: 0.45s; }
+.stagger-children > *:nth-child(6) { transition-delay: 0.55s; }
+
+/* ==============================
+   SHIMMER / LOADING
+   ============================== */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+/* ==============================
+   BUTTON RIPPLE
+   ============================== */
+.btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  transform: scale(0);
+  animation: rippleEffect 0.55s linear;
+  pointer-events: none;
+}
+@keyframes rippleEffect {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ==============================
+   PAGE LOADER
+   ============================== */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.page-loader__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.page-loader__logo {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--accent);
+  animation: logoPulse 1.2s ease-in-out infinite alternate;
+}
+@keyframes logoPulse {
+  from { opacity: 0.3; transform: scale(0.96); }
+  to   { opacity: 1;   transform: scale(1); }
+}
+.page-loader__bar-track {
+  width: 160px;
+  height: 2px;
+  background: var(--surface-2);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.page-loader__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  border-radius: 100px;
+  animation: loaderBar 1.4s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+@keyframes loaderBar {
+  from { width: 0; }
+  to   { width: 100%; }
+}
