@@ -2,7 +2,7 @@
 
 Personal portfolio website built with HTML, CSS, and JavaScript.
 
-🌐 Live site: https://kavyapratap-portfolio.netlify.app/
+🌐 Live site: https://kavyapratapsinghchauhanportfolio.netlify.app/
 
 ## Tech Stack
 - HTML5 / CSS3 / Vanilla JS
