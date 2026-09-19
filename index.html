@@ -442,23 +442,39 @@
           </div>
         </div>
         <div class="contact__right">
-          <form class="contact__form" id="contactForm">
+
+          <form class="contact__form" id="contactForm" name="contact" method="POST" data-netlify="true"
+            netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="John Doe" required />
+              <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required />
             </div>
+
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" placeholder="john@example.com" required />
+              <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email"
+                required />
             </div>
+
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" placeholder="Project Inquiry" />
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
             </div>
+
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                required></textarea>
             </div>
+
+            <!-- Spam protection: humans should leave this field empty -->
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="bot-field">Leave this field empty</label>
+              <input type="text" id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" />
+            </div>
+
             <button type="submit" class="btn btn--primary btn--full">
               Send Message <span class="btn__arrow">→</span>
             </button>
@@ -503,7 +519,7 @@
   <script src="js/nav.js"></script>
   <script src="js/counter.js"></script>
   <script src="js/form.js"></script>
-  <script src="js/skills.js"></script>
+  <!-- <script src="js/skills.js"></script> -->
 </body>
 
 </html>
