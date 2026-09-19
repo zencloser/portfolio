@@ -1,8 +1,8 @@
 /* nav.js — sticky nav + mobile menu */
 (function () {
-  const nav         = document.getElementById('nav');
-  const hamburger   = document.getElementById('hamburger');
-  const mobileMenu  = document.getElementById('mobileMenu');
+  const nav = document.getElementById('nav');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
 
   /* Scrolled state */
   window.addEventListener('scroll', () => {
@@ -12,9 +12,18 @@
   /* Hamburger toggle */
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      const isOpen = mobileMenu.classList.toggle('open');
+
+      hamburger.classList.toggle('active', isOpen);
+
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+
+      hamburger.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu'
+      );
+
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     /* Close on link click */
@@ -22,6 +31,10 @@
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         mobileMenu.classList.remove('open');
+
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
+
         document.body.style.overflow = '';
       });
     });
@@ -29,7 +42,7 @@
 
   /* Active nav link on scroll */
   const sections = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav__link');
+  const navLinks = document.querySelectorAll('.nav__link');
 
   const sectionObserver = new IntersectionObserver(
     (entries) => {
