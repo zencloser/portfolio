@@ -1278,6 +1278,14 @@ body.hovering .cursor-follower {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+
+  .contact__form .btn--full {
+    margin-inline: auto;
+  }
 }
 
 /* ==============================
@@ -1362,6 +1370,10 @@ body.hovering .cursor-follower {
     font-size: 0.7rem;
     gap: 1.25rem;
     animation-duration: 14s;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
   }
 
   /* Section titles */
@@ -1491,6 +1503,10 @@ body.hovering .cursor-follower {
     gap: 0.6rem;
   }
 
+  .contact__form .btn--full {
+    margin-inline: auto;
+  }
+
   /* Footer */
   .footer__top {
     flex-direction: column;
@@ -1532,6 +1548,10 @@ body.hovering .cursor-follower {
   .hero__label {
     font-size: 0.6rem;
     letter-spacing: 0.1em;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
   }
 
   .hero__scroll-indicator {
@@ -1606,6 +1626,10 @@ body.hovering .cursor-follower {
     padding: 0.75rem 0.9rem;
   }
 
+  .contact__form .btn--full {
+    margin-inline: auto;
+  }
+
   /* Footer */
   .footer__logo {
     font-size: 1.2rem;
@@ -1639,5 +1663,13 @@ body.hovering .cursor-follower {
 
   .container {
     padding: 0 1rem;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+
+  .contact__form .btn--full {
+    margin-inline: auto;
   }
 }
