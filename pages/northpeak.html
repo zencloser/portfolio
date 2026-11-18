@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+        content="NorthPeak Digital: a responsive digital agency website featuring Three.js animations, service sections, pricing, and interactive elements." />
+
+    <meta name="author" content="Kavya Pratap Singh Chauhan" />
+
+    <title>NorthPeak Digital | KPSC Portfolio</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/project.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+
+        <div class="nav__logo">
+            <a href="../index.html" aria-label="KPSC home" style="display:flex;align-items:center;gap:4px">
+                <span class="nav__logo-text">KPSC</span>
+                <span class="nav__logo-dot"></span>
+            </a>
+        </div>
+
+        <div class="nav__links">
+            <a href="../index.html#about" class="nav__link">About</a>
+            <a href="../index.html#work" class="nav__link">Work</a>
+            <a href="../index.html#skills" class="nav__link">Skills</a>
+            <a href="../index.html#contact" class="nav__link">Contact</a>
+        </div>
+
+        <div class="nav__cta">
+            <a href="../index.html#contact" class="btn btn--outline">
+                Contact Me
+            </a>
+        </div>
+
+    </nav>
+
+    <main>
+
+        <!-- Project Hero -->
+        <section class="proj-hero">
+
+            <div class="proj-hero__bg" style="background: linear-gradient(135deg, #102d3c, #1d4d59, #14232e);"></div>
+
+            <div class="container proj-hero__content">
+
+                <a href="../index.html#work" class="proj-back">
+                    ← Back to Projects
+                </a>
+
+                <div class="proj-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Three.js</span>
+                    <span class="tag">Responsive Design</span>
+                </div>
+
+                <h1 class="proj-hero__title">
+                    NorthPeak Digital
+                </h1>
+
+                <p class="proj-hero__subtitle">
+                    A responsive digital agency website featuring an animated
+                    Three.js mountain environment, service offerings, pricing
+                    sections, and interactive user interface elements.
+                </p>
+
+                <div class="proj-hero__meta">
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">Project Type</span>
+                        <span class="proj-meta-value">Web Development Internship Task</span>
+                    </div>
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">My Role</span>
+                        <span class="proj-meta-value">Code Review, Refinement & Testing</span>
+                    </div>
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">Deployment</span>
+                        <span class="proj-meta-value">Netlify</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="proj-body">
+            <div class="container proj-body__inner">
+
+                <aside class="proj-toc">
+                    <div class="proj-toc__label">Contents</div>
+                    <ul class="proj-toc__list">
+                        <li><a href="#overview" class="proj-toc__link active">Overview</a></li>
+                        <li><a href="#features" class="proj-toc__link">Features</a></li>
+                        <li><a href="#design" class="proj-toc__link">Design Decisions</a></li>
+                        <li><a href="#accessibility" class="proj-toc__link">Accessibility</a></li>
+                        <li><a href="#performance" class="proj-toc__link">Performance</a></li>
+                        <li><a href="#contribution" class="proj-toc__link">My Contribution</a></li>
+                    </ul>
+                </aside>
+
+                <article class="proj-content">
+
+                    <div class="proj-section" id="overview">
+                        <h2 class="proj-section__title">Project Overview</h2>
+                        <p>
+                            NorthPeak Digital is a responsive one-page website for a fictional
+                            e-commerce development agency, created for the Digital Heroes
+                            Web Development Internship Task.
+                        </p>
+                        <p>
+                            The website combines an interactive Three.js mountain visualization
+                            with service offerings, pricing plans, and interactive interface
+                            elements to create a consistent digital agency experience.
+                        </p>
+                    </div>
+
+                    <div class="proj-section proj-screenshot-section">
+                        <h2 class="proj-section__title">Application Preview</h2>
+                        <figure>
+                            <img src="../assest/project/northpeak/dashboard.png"
+                                alt="NorthPeak Digital agency website showing its Three.js animated mountain hero"
+                                loading="lazy"
+                                style="width:100%; height:auto; border-radius:12px; border:1px solid var(--border);" />
+                            <figcaption class="proj-image-caption">
+                                NorthPeak Digital website preview
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="proj-section" id="features">
+                        <h2 class="proj-section__title">Key Features</h2>
+                        <ul class="proj-list">
+                            <li>Responsive one-page agency website.</li>
+                            <li>Interactive Three.js hero animation featuring a low-poly mountain and animated climbing
+                                path.</li>
+                            <li>Six-service grid layout.</li>
+                            <li>Three pricing tiers: Basecamp, Ascent, and Summit.</li>
+                            <li>Client-side contact form validation.</li>
+                            <li>Responsive navigation menu.</li>
+                        </ul>
+                    </div>
+
+                    <div class="proj-section" id="design">
+                        <h2 class="proj-section__title">Design Decisions</h2>
+                        <p>
+                            The fictional agency uses a mountain-inspired visual identity.
+                            Its pricing plans follow a Basecamp, Ascent, and Summit progression
+                            to maintain the theme throughout the website.
+                        </p>
+                        <p>
+                            A dark navy background with teal and gold accents creates the
+                            visual palette. The mountain visualization adds an interactive
+                            element without distracting from the main content.
+                        </p>
+                        <p>
+                            The services are presented without numerical ordering because
+                            they do not represent sequential steps.
+                        </p>
+                    </div>
+
+                    <div class="proj-section" id="accessibility">
+                        <h2 class="proj-section__title">Accessibility</h2>
+                        <ul class="proj-list">
+                            <li>Semantic HTML landmarks for page structure.</li>
+                            <li>Skip-to-content navigation link.</li>
+                            <li>Visible keyboard focus states using :focus-visible.</li>
+                            <li>Form fields with associated labels and accessible error messages.</li>
+                            <li>Decorative Three.js canvas marked as hidden from assistive technology.</li>
+                            <li>Reduced-motion preferences respected by the animation.</li>
+                            <li>Text and interactive element contrast checked against the dark background.</li>
+                        </ul>
+                    </div>
+
+                    <div class="proj-section" id="performance">
+                        <h2 class="proj-section__title">Performance Optimization</h2>
+                        <p>
+                            Performance considerations were incorporated into the implementation
+                            to reduce unnecessary rendering work and external dependencies.
+                        </p>
+                        <ul class="proj-list">
+                            <li>Three.js generates the hero visual without external image assets.</li>
+                            <li>Limited font families and weights, with font-display: swap.</li>
+                            <li>Renderer pixel ratio capped at 2.</li>
+                            <li>Animation pauses when the browser tab is hidden.</li>
+                            <li>Reduced-motion preferences are respected.</li>
+                            <li>Low-polygon geometry keeps the 3D scene relatively lightweight.</li>
+                            <li>A single CSS file and JavaScript file keep the implementation simple.</li>
+                        </ul>
+                    </div>
+
+                    <div class="proj-section" id="contribution">
+                        <h2 class="proj-section__title">My Contribution & AI Disclosure</h2>
+                        <p>
+                            Claude was used to generate the initial version of the website,
+                            including its layout, content, and Three.js hero animation.
+                        </p>
+                        <p>
+                            My work focused on reviewing the generated code, refining the
+                            styling and content, testing responsiveness across different
+                            screen sizes, improving accessibility, verifying Lighthouse
+                            scores, and making changes to better satisfy the assignment
+                            requirements.
+                        </p>
+                        <p>
+                            AI accelerated the initial development, while I focused on
+                            understanding, reviewing, testing, and refining the final
+                            implementation before submission.
+                        </p>
+                    </div>
+
+                    <div class="proj-section">
+                        <h2 class="proj-section__title">Lighthouse Results</h2>
+                        <p>
+                            The deployed website was tested using Chrome DevTools Lighthouse.
+                            The repository reports the following scores:
+                        </p>
+
+                        <ul class="proj-list">
+                            <li><strong>Performance:</strong> 99 / 100</li>
+                            <li><strong>Accessibility:</strong> 96 / 100</li>
+                            <li><strong>Best Practices:</strong> 96 / 100</li>
+                            <li><strong>SEO:</strong> 100 / 100</li>
+                        </ul>
+
+                        <p>
+                            These are the results documented in the project README.
+                        </p>
+                    </div>
+
+                    <div class="proj-github">
+                        <a href="https://northpeakdigitalheros.netlify.app/" target="_blank" rel="noopener noreferrer"
+                            class="proj-github__link">
+                            View Live Website
+                            <span class="proj-github__arrow" aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="https://github.com/zencloser/northpeak-digital" target="_blank"
+                            rel="noopener noreferrer" class="proj-github__link">
+                            View GitHub Repository
+                            <span class="proj-github__arrow" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__top">
+
+                <div class="footer__logo">
+                    KPSC<span class="footer__logo-dot">.</span>
+                </div>
+
+                <div class="footer__socials">
+
+                    <a href="https://github.com/zencloser" target="_blank" rel="noopener noreferrer"
+                        class="footer__social">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/kavya-pratap-singh-chauhan-b5419325a" target="_blank"
+                        rel="noopener noreferrer" class="footer__social">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2026 Kavya Pratap Singh Chauhan. All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/cursor.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/nav.js"></script>
+
+</body>
+
+</html>
