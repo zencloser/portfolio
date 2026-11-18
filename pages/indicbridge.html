@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+        content="IndicBridge: an explainable multilingual information retrieval system supporting Hindi, English, and Hinglish." />
+
+    <meta name="author" content="Kavya Pratap Singh Chauhan" />
+
+    <title>IndicBridge | KPSC Portfolio</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/project.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+
+        <div class="nav__logo">
+            <a href="../index.html" aria-label="KPSC home" style="display:flex;align-items:center;gap:4px">
+                <span class="nav__logo-text">KPSC</span>
+                <span class="nav__logo-dot"></span>
+            </a>
+        </div>
+
+        <div class="nav__links">
+            <a href="../index.html#about" class="nav__link">About</a>
+            <a href="../index.html#work" class="nav__link">Work</a>
+            <a href="../index.html#skills" class="nav__link">Skills</a>
+            <a href="../index.html#contact" class="nav__link">Contact</a>
+        </div>
+
+        <div class="nav__cta">
+            <a href="../index.html#contact" class="btn btn--outline">
+                Contact Me
+            </a>
+        </div>
+
+    </nav>
+
+    <main>
+
+        <!-- Project Hero -->
+        <section class="proj-hero">
+
+            <div class="proj-hero__bg" style="background: linear-gradient(135deg, #17142b, #292044, #172c3c);"></div>
+
+            <div class="container proj-hero__content">
+
+                <a href="../index.html#work" class="proj-back">
+                    ← Back to Projects
+                </a>
+
+                <div class="proj-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Information Retrieval</span>
+                    <span class="tag">Unicode</span>
+                    <span class="tag">Phonetic Matching</span>
+                    <span class="tag">NLP</span>
+                </div>
+
+                <h1 class="proj-hero__title">
+                    IndicBridge
+                </h1>
+
+                <p class="proj-hero__subtitle">
+                    An explainable multilingual information retrieval system
+                    designed to improve search across Hindi, English, and
+                    Romanized Hindi (Hinglish) by combining text normalization,
+                    transliteration, and phonetic matching techniques.
+                </p>
+
+                <div class="proj-hero__meta">
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">Course</span>
+                        <span class="proj-meta-value">CSD358 - Information Retrieval</span>
+                    </div>
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">My Role</span>
+                        <span class="proj-meta-value">Linguistic Preprocessing & IndicSoundex</span>
+                    </div>
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">Project Type</span>
+                        <span class="proj-meta-value">Collaborative Project</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Case Study Content -->
+        <section class="proj-body">
+
+            <div class="container proj-body__inner">
+
+                <!-- Table of Contents -->
+                <aside class="proj-toc">
+
+                    <div class="proj-toc__label">Contents</div>
+
+                    <ul class="proj-toc__list">
+                        <li>
+                            <a href="#overview" class="proj-toc__link active">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#problem" class="proj-toc__link">Problem</a>
+                        </li>
+                        <li>
+                            <a href="#solution" class="proj-toc__link">Our Approach</a>
+                        </li>
+                        <li>
+                            <a href="#contribution" class="proj-toc__link">My Contribution</a>
+                        </li>
+                        <li>
+                            <a href="#evaluation" class="proj-toc__link">Evaluation</a>
+                        </li>
+                        <li>
+                            <a href="#future-work" class="proj-toc__link">Future Work</a>
+                        </li>
+                    </ul>
+
+                </aside>
+
+                <!-- Main Article -->
+                <article class="proj-content">
+
+                    <!-- Overview -->
+                    <div class="proj-section" id="overview">
+
+                        <h2 class="proj-section__title">Project Overview</h2>
+
+                        <p>
+                            IndicBridge is a multilingual Information Retrieval system
+                            developed to support search across Hindi, English, and
+                            Romanized Hindi (Hinglish).
+                        </p>
+
+                        <p>
+                            The system addresses differences in scripts, spelling
+                            variations, and phonetic similarities that can make
+                            multilingual search difficult. It combines traditional
+                            information retrieval techniques with linguistic
+                            preprocessing and cross-script matching.
+                        </p>
+
+                    </div>
+
+                    <!-- Project Screenshot -->
+                    <div class="proj-section proj-screenshot-section">
+                        <h2 class="proj-section__title">Application Preview</h2>
+
+                        <figure>
+                            <img src="../assest/project/indicbridge/dashboard.png"
+                                alt="IndicBridge multilingual information retrieval application dashboard"
+                                loading="lazy"
+                                style="width:100%; height:auto; border-radius:12px; border:1px solid var(--border);" />
+                            <figcaption>
+                                IndicBridge application interface
+                            </figcaption>
+                        </figure>
+                    </div>
+                    
+
+                    <!-- Problem -->
+                    <div class="proj-section" id="problem">
+
+                        <h2 class="proj-section__title">The Problem</h2>
+
+                        <p>
+                            Users may express the same Hindi word using Devanagari
+                            script or Romanized Hindi. Different spellings and
+                            transliteration variations can prevent conventional
+                            exact-token search systems from finding relevant results.
+                        </p>
+
+                        <p>
+                            The challenge was to improve retrieval across these
+                            variations while maintaining explainable and meaningful
+                            relevance ranking.
+                        </p>
+
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="proj-section" id="solution">
+
+                        <h2 class="proj-section__title">Our Approach</h2>
+
+                        <p>
+                            IndicBridge combines multiple information retrieval
+                            techniques to improve multilingual search.
+                        </p>
+
+                        <ul class="proj-list">
+
+                            <li>
+                                <strong>Inverted Index:</strong>
+                                Organizes document terms to support efficient retrieval.
+                            </li>
+
+                            <li>
+                                <strong>TF-IDF:</strong>
+                                Represents term importance and contributes to
+                                relevance-based document ranking.
+                            </li>
+
+                            <li>
+                                <strong>Unicode Normalization:</strong>
+                                Standardizes text representations before retrieval.
+                            </li>
+
+                            <li>
+                                <strong>Cross-Script Processing:</strong>
+                                Supports matching across Devanagari and Romanized
+                                Hindi representations.
+                            </li>
+
+                            <li>
+                                <strong>Phonetic Matching:</strong>
+                                Uses IndicSoundex to help identify acoustically
+                                similar Indic consonant representations.
+                            </li>
+
+                            <li>
+                                <strong>Explainable Ranking:</strong>
+                                Combines retrieval signals to make relevance
+                                ranking easier to interpret.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Individual Contribution -->
+                    <div class="proj-section" id="contribution">
+
+                        <h2 class="proj-section__title">My Contribution</h2>
+
+                        <p>
+                            I contributed to the linguistic preprocessing component
+                            of IndicBridge, focusing on standardizing Indic text and
+                            improving phonetic matching for Romanized Hindi queries.
+                        </p>
+
+                        <h3>Linguistic Preprocessing</h3>
+
+                        <ul class="proj-list">
+
+                            <li>
+                                Implemented Unicode NFC normalization to standardize
+                                text representations.
+                            </li>
+
+                            <li>
+                                Worked on Devanagari nukta folding to handle
+                                representation variations.
+                            </li>
+
+                            <li>
+                                Developed Hindi and Hinglish stopword lists to remove
+                                low-information terms during preprocessing.
+                            </li>
+
+                        </ul>
+
+                        <h3>IndicSoundex Algorithm</h3>
+
+                        <p>
+                            Developed a custom seven-group phonetic algorithm called
+                            IndicSoundex. It groups selected acoustically similar
+                            Indic consonants to support phonetic matching across
+                            spelling variations in Romanized Hindi.
+                        </p>
+
+                        <p>
+                            This component helps the retrieval system identify
+                            potentially related terms even when users enter
+                            different Romanized spellings.
+                        </p>
+
+                    </div>
+
+                    <!-- Evaluation -->
+                    <div class="proj-section" id="evaluation">
+
+                        <h2 class="proj-section__title">Evaluation & Results</h2>
+
+                        <p>
+                            The project evaluated the proposed retrieval approach
+                            against an exact-token TF-IDF baseline using 24 judged
+                            queries.
+                        </p>
+
+                        <p>
+                            The team's reported evaluation showed:
+                        </p>
+
+                        <ul class="proj-list">
+
+                            <li>
+                                A 7.38% relative improvement in Mean Average Precision
+                                (MAP).
+                            </li>
+
+                            <li>
+                                A 9.68% relative improvement in Recall@10.
+                            </li>
+
+                            <li>
+                                A small decrease in Precision@5, highlighting a
+                                trade-off between retrieving more relevant documents
+                                and maintaining precision in the top results.
+                            </li>
+
+                        </ul>
+
+                        <p>
+                            These results are the team's reported benchmark
+                            measurements for the project evaluation.
+                        </p>
+
+                    </div>
+
+                    <!-- Future Work -->
+                    <div class="proj-section" id="future-work">
+
+                        <h2 class="proj-section__title">Future Improvements</h2>
+
+                        <p>
+                            Potential improvements include expanding linguistic
+                            coverage, refining transliteration and phonetic matching,
+                            increasing evaluation coverage, and testing the system
+                            with larger and more diverse multilingual datasets.
+                        </p>
+
+                    </div>
+
+                    <!-- GitHub Link -->
+                    <div class="proj-github">
+
+                        <a href="https://github.com/devagarwal2709/indicbridge-ir-system" target="_blank"
+                            rel="noopener noreferrer" class="proj-github__link">
+                            View Project on GitHub
+                            <span class="proj-github__arrow" aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__top">
+
+                <div class="footer__logo">
+                    KPSC<span class="footer__logo-dot">.</span>
+                </div>
+
+                <div class="footer__socials">
+
+                    <a href="https://github.com/zencloser" target="_blank" rel="noopener noreferrer"
+                        class="footer__social">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/kavya-pratap-singh-chauhan-b5419325a" target="_blank"
+                        rel="noopener noreferrer" class="footer__social">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2026 Kavya Pratap Singh Chauhan. All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/cursor.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/nav.js"></script>
+
+</body>
+
+</html>
