@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+        content="Agnipath: an AI-assisted industrial fire and persistent thermal-source monitoring project built for Smart India Hackathon 2026." />
+
+    <title>Agnipath | KPSC Portfolio</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/project.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="noise-overlay"></div>
+
+    <nav class="nav" id="nav">
+        <div class="nav__logo">
+            <a href="../index.html" aria-label="KPSC home" style="display:flex;align-items:center;gap:4px">
+                <span class="nav__logo-text">KPSC</span>
+                <span class="nav__logo-dot"></span>
+            </a>
+        </div>
+
+        <div class="nav__links">
+            <a href="../index.html#about" class="nav__link">About</a>
+            <a href="../index.html#work" class="nav__link">Work</a>
+            <a href="../index.html#skills" class="nav__link">Skills</a>
+            <a href="../index.html#contact" class="nav__link">Contact</a>
+        </div>
+
+        <div class="nav__cta">
+            <a href="../index.html#contact" class="btn btn--outline">Contact Me</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="proj-hero">
+            <div class="proj-hero__bg" style="background: linear-gradient(135deg, #101820, #263746, #14252e);"></div>
+
+            <div class="container proj-hero__content">
+                <a href="../index.html#work" class="proj-back">
+                    ← Back to Projects
+                </a>
+
+                <div class="proj-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">NASA FIRMS</span>
+                    <span class="tag">OpenStreetMap</span>
+                    <span class="tag">Geospatial Data</span>
+                </div>
+
+                <h1 class="proj-hero__title">
+                    Agnipath
+                </h1>
+
+                <p class="proj-hero__subtitle">
+                    A Smart India Hackathon 2026 project exploring the detection,
+                    classification, and monitoring of industrial fires and persistent
+                    thermal sources using satellite thermal-anomaly data and
+                    geospatial infrastructure information.
+                </p>
+
+                <div class="proj-hero__meta">
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">Project</span>
+                        <span class="proj-meta-value">Smart India Hackathon 2026</span>
+                    </div>
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">Role</span>
+                        <span class="proj-meta-value">Backend Developer</span>
+                    </div>
+
+                    <div class="proj-meta-item">
+                        <span class="proj-meta-label">Problem ID</span>
+                        <span class="proj-meta-value">SIH26162</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proj-body">
+            <div class="container proj-body__inner">
+
+                <aside class="proj-toc">
+                    <div class="proj-toc__label">Contents</div>
+                    <ul class="proj-toc__list">
+                        <li><a href="#overview" class="proj-toc__link active">Overview</a></li>
+                        <li><a href="#challenge" class="proj-toc__link">Problem</a></li>
+                        <li><a href="#architecture" class="proj-toc__link">Architecture</a></li>
+                        <li><a href="#contribution" class="proj-toc__link">My Contribution</a></li>
+                        <li><a href="#limitations" class="proj-toc__link">Limitations</a></li>
+                    </ul>
+                </aside>
+
+                <article class="proj-content">
+
+                    <div class="proj-section" id="overview">
+                        <h2 class="proj-section__title">Project Overview</h2>
+                        <p>
+                            Agnipath is a Smart India Hackathon 2026 project focused on
+                            identifying and classifying industrial fires and persistent
+                            thermal sources using satellite thermal-anomaly data and
+                            geospatial infrastructure information.
+                        </p>
+                        <p>
+                            The system combines NASA FIRMS detections with nearby industrial
+                            infrastructure information from OpenStreetMap to support the
+                            analysis of thermal events and their surrounding context.
+                        </p>
+                    </div>
+
+                    <div class="proj-section" id="challenge">
+                        <h2 class="proj-section__title">The Problem</h2>
+                        <p>
+                            Satellite systems can detect thermal anomalies, but a detection
+                            alone does not establish whether the source is an industrial fire,
+                            a forest fire, or another persistent heat source.
+                        </p>
+                        <p>
+                            The project aims to combine thermal observations with geographic
+                            context to help distinguish potentially industrial events from
+                            other sources and make the results easier to investigate.
+                        </p>
+                    </div>
+
+                    <div class="proj-section" id="architecture">
+                        <h2 class="proj-section__title">Technical Architecture</h2>
+                        <p>
+                            The backend integrates satellite detections with nearby geographic
+                            features. The system was designed around the following components:
+                        </p>
+                        <ul class="proj-list">
+                            <li>
+                                <strong>NASA FIRMS:</strong> Thermal-anomaly records, including
+                                coordinates, acquisition date, brightness temperature, fire
+                                radiative power, and confidence.
+                            </li>
+                            <li>
+                                <strong>OpenStreetMap / Overpass API:</strong> Nearby industrial
+                                infrastructure features for geographic context.
+                            </li>
+                            <li>
+                                <strong>Geospatial processing:</strong> Coordinates and nearby
+                                infrastructure are used to examine the context of detected events.
+                            </li>
+                            <li>
+                                <strong>Classification:</strong> A Random Forest classifier was
+                                configured as an initial placeholder for future model development.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="proj-section" id="contribution">
+                        <h2 class="proj-section__title">My Contribution</h2>
+                        <p>
+                            I worked on the backend, focusing on integrating external data
+                            sources and preparing the detection data for analysis and
+                            visualization.
+                        </p>
+                        <ul class="proj-list">
+                            <li>Integrated NASA FIRMS thermal-anomaly data retrieval.</li>
+                            <li>Worked with OpenStreetMap / Overpass API to retrieve nearby industrial features.</li>
+                            <li>Worked on backend data structures and frontend-backend integration.</li>
+                            <li>Explored a classification pipeline for distinguishing industrial thermal sources from
+                                other anomalies.</li>
+                        </ul>
+                    </div>
+
+                    <div class="proj-section" id="limitations">
+                        <h2 class="proj-section__title">Current Limitations and Next Steps</h2>
+                        <p>
+                            The classification model is not yet a trained, validated production
+                            model because labeled training data was unavailable. The current
+                            classifier configuration is therefore a starting point rather than
+                            proof of reliable industrial-fire classification.
+                        </p>
+                        <p>
+                            Further work includes obtaining labeled examples, training and
+                            evaluating the classifier, validating results against ground truth,
+                            and improving geographic filtering and monitoring.
+                        </p>
+                    </div>
+
+                    <div class="proj-github">
+                        <a href="https://github.com/zencloser/SIH26162" target="_blank" rel="noopener noreferrer"
+                            class="proj-github__link">
+                            View Project on GitHub
+                            <span class="proj-github__arrow" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    KPSC<span class="footer__logo-dot">.</span>
+                </div>
+
+                <div class="footer__socials">
+                    <a href="https://github.com/zencloser" target="_blank" rel="noopener noreferrer"
+                        class="footer__social">GitHub</a>
+
+                    <a href="https://www.linkedin.com/in/kavya-pratap-singh-chauhan-b5419325a" target="_blank"
+                        rel="noopener noreferrer" class="footer__social">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2026 Kavya Pratap Singh Chauhan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/cursor.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

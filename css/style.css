@@ -610,8 +610,8 @@ body.hovering .cursor-follower {
 
 .about__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -775,6 +775,14 @@ body.hovering .cursor-follower {
   gap: 2rem;
 }
 
+.project-card__screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
 .project-card {
   background: var(--surface);
   border-radius: var(--radius-lg);
@@ -790,16 +798,12 @@ body.hovering .cursor-follower {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border-2);
 }
 
-.project-card--featured {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-}
-
 .project-card--featured .project-card__image {
   height: 100%;
   min-height: 300px;
 }
+
+
 
 .project-card__image {
   position: relative;
@@ -1271,7 +1275,9 @@ body.hovering .cursor-follower {
   }
 
   .project-card--featured .project-card__image {
-    height: 180px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
   }
 
   .contact__inner {
@@ -1399,23 +1405,37 @@ body.hovering .cursor-follower {
     display: none;
   }
 
+
+
+  @media (min-width: 600px) and (max-width: 768px) {
+    .about__right {
+      display: flex;
+    }
+
+    .about__image-wrapper {
+      max-width: 100%;
+    }
+  }
+
   .about__stats {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
   .about__stat {
-    flex: 1 1 calc(33% - 1rem);
-    min-width: 80px;
+    min-width: 0;
   }
 
-  .about__stat-number {
+  .about__stat-number,
+  .about__stat-suffix {
     font-size: 2rem;
   }
 
-  .about__stat>span:nth-child(2) {
-    font-size: 2rem;
+  .about__stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
   }
 
   .about__text {
@@ -1438,11 +1458,13 @@ body.hovering .cursor-follower {
   }
 
   .project-card--featured .project-card__image {
-    height: 180px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
   }
 
   .project-card__image {
-    height: 180px;
+    height: auto;
   }
 
   .project-card__title {
